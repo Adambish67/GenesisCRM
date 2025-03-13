@@ -40,9 +40,10 @@ LOGGING = {
 SECRET_KEY = 'django-insecure-b_irq6606vs*6%eqrm@45(t=3!eazw020oo0l0s9-@wz@%%^oj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['adambish67.pythonanywhere.com']
+
 
 
 # Application definition
