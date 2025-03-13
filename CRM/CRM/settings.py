@@ -14,18 +14,25 @@ from pathlib import Path
 
 import os
 
-DEBUG = False  # Must be False for production
+DEBUG = False  # Set to False for production
 
-# Allow Railway domain
-ALLOWED_HOSTS = ["*"]  # Temporarily allow all hosts
-CSRF_TRUSTED_ORIGINS = ["https://your-app-name.up.railway.app"]  # Replace with your real Railway URL
+ALLOWED_HOSTS = ["*"]  # Allow all hosts temporarily
+CSRF_TRUSTED_ORIGINS = ["https://your-app-name.up.railway.app"]  # Replace with your actual Railway URL
 
-# Use Railway-assigned port or default to 8000
-PORT = os.getenv("PORT", "8080")
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+# Enable logging to capture errors in Railway logs
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "DEBUG",
+    },
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
