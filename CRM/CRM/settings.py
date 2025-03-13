@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+import os
+
+DEBUG = False  # Must be False for production
+
+# Allow Railway domain
+ALLOWED_HOSTS = ["*"]  # Temporarily allow all hosts
+CSRF_TRUSTED_ORIGINS = ["https://your-app-name.up.railway.app"]  # Replace with your real Railway URL
+
+# Use Railway-assigned port or default to 8000
+PORT = os.getenv("PORT", "8000")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
