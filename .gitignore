@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+__pycache__/
+
+# Database
+*.sqlite3
+
+# Django secrets
+.env
+*.pyc
+*.log
+
+# PyCharm
+.idea/
+
+# Static & media files
+/static/
+/media/
