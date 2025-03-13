@@ -21,7 +21,7 @@ ALLOWED_HOSTS = ["*"]  # Temporarily allow all hosts
 CSRF_TRUSTED_ORIGINS = ["https://your-app-name.up.railway.app"]  # Replace with your real Railway URL
 
 # Use Railway-assigned port or default to 8000
-PORT = os.getenv("PORT", "8000")
+PORT = os.getenv("PORT", "8080")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
