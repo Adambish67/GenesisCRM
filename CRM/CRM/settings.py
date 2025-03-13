@@ -17,7 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = False  # Set to False for production
 
 ALLOWED_HOSTS = ["*"]  # Allow all hosts temporarily
-CSRF_TRUSTED_ORIGINS = ["https://your-app-name.up.railway.app"]  # Replace with your actual Railway URL
 
 # Enable logging to capture errors in Railway logs
 LOGGING = {
